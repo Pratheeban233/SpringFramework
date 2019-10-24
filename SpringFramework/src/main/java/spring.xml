@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<!-- Alien class bean -->
+	<!-- <bean id="alien" class="com.prathi.SpringFramework.Alien" scope="prototype"> 
+		</bean> -->
+		<!-- Auto-Wired -->
+	<bean id="alien" class="com.prathi.SpringFramework.Alien" autowire="byType">
+<!-- setter injection -->
+	<property name="age" value="18"></property> 
+  <!-- <property name="laptop" ref="laptop"></property>  -->
+	<!-- Auto-Wired -->
+	
+		<!-- <property name="com" ref="com"></property>  -->
+		
+		
+		<!-- constructor injection -->
+	<!--	<constructor-arg value="21"></constructor-arg>
+		<constructor-arg ref="laptop"></constructor-arg> -->
+	</bean>
+
+	<!-- Laptop class bean -->
+	<bean id="com" class="com.prathi.SpringFramework.Laptop"></bean>
+	<bean id="desktop" class="com.prathi.SpringFramework.Desktop" primary="true"></bean>
+</beans>
